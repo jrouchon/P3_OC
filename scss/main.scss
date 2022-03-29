@@ -1,0 +1,85 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$color-background: (main: grey, elem: white, footer: black);
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.font-primary {
+    font-family: Shrikhand;
+}
+
+/*@function font-color-choice($background-color) {
+    if ($background-color == black){
+       @return lighten(grey);
+    } else {
+       @return black;
+      }
+}
+
+@mixin font-color($ft-color: font-color-choice(map-get($color-background, footer))) {
+    color: $ft-color;
+}*/
+
+.font-text {
+    font-family: Roboto;
+    font-size: 14px;
+    /*@include font-color($color-background);*/
+
+    &--bold {
+        font-weight: 400;
+    }
+
+    &--bolder {
+        font-weight: 500;
+    }
+}
+
+/*
+    
+   h1 big title font-size bold
+   h2 small title font-size bold
+    text font--size thin 
+    button font-size bold
+   h3 footer logo 
+*/
+
+.footer {
+    height: 200px;
+    background-color: lighten(map-get($color-background, footer), 20%);
+
+    &__elem {
+        padding: 20px 20px 15px 20px;
+    }
+    &__list__elem {
+        padding: 5px 20px;
+    }
+
+    .font-primary {
+        color: white;
+        font-weight: 400;
+    }
+    .font-text {
+        color: lighten(map-get($color-background, main), 30%);
+    }
+}
+
+.fa-footer {
+    &.fa-utensils {
+        padding-right: 12px;
+    }
+
+    &.fa-handshake-angle {
+        font-size: 13px;
+        padding-right: 10px;
+    }
+}

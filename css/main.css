@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.font-primary {
+  font-family: Shrikhand;
+}
+
+/*@function font-color-choice($background-color) {
+    if ($background-color == black){
+       @return lighten(grey);
+    } else {
+       @return black;
+      }
+}
+
+@mixin font-color($ft-color: font-color-choice(map-get($color-background, footer))) {
+    color: $ft-color;
+}*/
+.font-text {
+  font-family: Roboto;
+  font-size: 14px;
+  /*@include font-color($color-background);*/
+}
+.font-text--bold {
+  font-weight: 400;
+}
+.font-text--bolder {
+  font-weight: 500;
+}
+
+/*
+
+   h1 big title font-size bold
+   h2 small title font-size bold
+    text font--size thin 
+    button font-size bold
+   h3 footer logo 
+*/
+.footer {
+  height: 200px;
+  background-color: #333333;
+}
+.footer__elem {
+  padding: 20px 20px 15px 20px;
+}
+.footer__list__elem {
+  padding: 5px 20px;
+}
+.footer .font-primary {
+  color: white;
+  font-weight: 400;
+}
+.footer .font-text {
+  color: #cdcdcd;
+}
+
+.fa-footer.fa-utensils {
+  padding-right: 12px;
+}
+.fa-footer.fa-handshake-angle {
+  font-size: 13px;
+  padding-right: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
