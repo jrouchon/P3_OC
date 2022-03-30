@@ -1,3 +1,4 @@
+/*#d9d9d9*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,14 +34,91 @@
   font-weight: 500;
 }
 
+.font-h1 {
+  font-family: Roboto;
+  font-size: 19px;
+  margin: 0px;
+}
+
+.font-h2 {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+  color: #333333;
+}
+
 /*
 
    h1 big title font-size bold
-   h2 small title font-size bold
-    text font--size thin 
-    button font-size bold
+   h2 small title fs 16px? bold
+    text fs 16px? thin 
+    button fs 14px  font-text bold bolder
    h3 footer logo 
 */
+/* header */
+header {
+  /*border: 2px solid blue; /* nb : visualisation */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  /*repetition 1*/
+  justify-content: space-around;
+  /*repetition 1*/
+  align-items: center;
+  /*repetition 1*/
+}
+
+.logo {
+  width: 150px;
+}
+
+/* main */
+.app__geolocation {
+  height: 50px;
+  background-color: #e6e6e6;
+  border-top: 3px solid #cdcdcd;
+  display: flex;
+  /*repetition 2*/
+  justify-content: center;
+  /*repetition 2*/
+  align-items: center;
+  /*repetition 2*/
+}
+.app__geolocation__elem {
+  padding: 0px 20px 0px 0px;
+}
+.app__geolocation__elem--color {
+  color: #333333;
+}
+.app__get-restaurant {
+  height: 250px;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+.app__get-restaurant .font-h1 {
+  padding: 40px 55px 5px 50px;
+}
+.app__get-restaurant .font-h2 {
+  padding: 5px 20px 30px 20px;
+}
+.app__get-restaurant__btn {
+  padding-top: 10px;
+}
+.app__operate {
+  /**/
+}
+
+.btn {
+  padding: 12px 20px 12px 20px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  background-image: linear-gradient(353deg, #9356DC, #FF79DA);
+  box-shadow: 0px 5px 10px #cdcdcd;
+}
+
+/* footer */
 .footer {
   height: 200px;
   background-color: #333333;
@@ -56,7 +134,7 @@
   font-weight: 400;
 }
 .footer .font-text {
-  color: #cdcdcd;
+  color: #f3f3f3;
 }
 
 .fa-footer.fa-utensils {

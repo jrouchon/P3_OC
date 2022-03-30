@@ -2,8 +2,10 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$color-background: (main: grey, elem: white, footer: black);
+$color-font-dark: #333333;
 
+$color-background: (main: #e6e6e6, elem: white, footer: black);
+/*#d9d9d9*/
 
 * {
     box-sizing: border-box;
@@ -32,7 +34,7 @@ $color-background: (main: grey, elem: white, footer: black);
 
 .font-text {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 14px; /*0.9rem*/
     /*@include font-color($color-background);*/
 
     &--bold {
@@ -42,16 +44,99 @@ $color-background: (main: grey, elem: white, footer: black);
     &--bolder {
         font-weight: 500;
     }
+
+}
+
+.font-h1 {
+    font-family: Roboto;
+    font-size: 19px; /*1.2rem*/
+    margin: 0px;
+}
+
+.font-h2 {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 16px; /*1rem*/
+    color: $color-font-dark;
 }
 
 /*
     
    h1 big title font-size bold
-   h2 small title font-size bold
-    text font--size thin 
-    button font-size bold
+   h2 small title fs 16px? bold
+    text fs 16px? thin 
+    button fs 14px  font-text bold bolder
    h3 footer logo 
 */
+
+/* header */
+
+header {
+    /*border: 2px solid blue; /* nb : visualisation */
+    width: 100%;
+    height: 60px;
+    display: flex; /*repetition 1*/
+    justify-content: space-around; /*repetition 1*/
+    align-items: center; /*repetition 1*/
+}
+
+.logo {
+    width: 150px;
+}
+
+/* main */
+
+.app {
+    &__geolocation {
+        height: 50px;
+        background-color: map-get($color-background, main);
+        border-top: 3px solid darken(map-get($color-background, main), 10%);
+        display: flex; /*repetition 2*/
+        justify-content: center; /*repetition 2*/
+        align-items: center; /*repetition 2*/
+        &__elem {
+            padding: 0px 20px 0px 0px;
+
+            &--color {
+                color: $color-font-dark;
+            }
+        }
+    }
+
+    &__get-restaurant {
+        height: 250px;
+        background-color: lighten(map-get($color-background, main), 5%);
+        text-align: center;
+
+        .font-h1 {
+            padding: 40px 55px 5px 50px;
+        }
+
+        .font-h2 {
+            padding: 5px 20px 30px 20px;
+        }
+
+        &__btn {
+            padding-top: 10px;
+        }
+    }
+
+    &__operate {
+        /**/
+    }
+}
+
+.btn {
+    padding: 12px 20px 12px 20px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(353deg, $color-primary, $color-secondary);
+    box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%);
+}
+
+/* footer */
 
 .footer {
     height: 200px;
@@ -69,7 +154,7 @@ $color-background: (main: grey, elem: white, footer: black);
         font-weight: 400;
     }
     .font-text {
-        color: lighten(map-get($color-background, main), 30%);
+        color: lighten(map-get($color-background, main), 5%);
     }
 }
 
