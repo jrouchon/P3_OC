@@ -58,6 +58,9 @@ $color-background: (main: #e6e6e6, elem: white, footer: black);
     font-weight: 300;
     font-size: 16px; /*1rem*/
     color: $color-font-dark;
+    &--bolder {
+        font-weight: 600;
+    }
 }
 
 /*
@@ -82,6 +85,10 @@ header {
 
 .logo {
     width: 150px;
+}
+
+.title-h1 {
+    padding: 40px 5px 15px 20px;
 }
 
 /* main */
@@ -122,7 +129,52 @@ header {
     }
 
     &__operate {
-        /**/
+        height: 370px;
+        background-color: map-get($color-background, elem);
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+
+            &__card {
+                display: flex;
+                background-color: lighten(map-get($color-background, main), 5%);
+                box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
+                padding: 20px 15px 20px 15px;
+                margin: 10px 20px 10px 20px; /*repetition 4?*/
+                border-radius: 18px;
+
+                .fa-solid {
+                    padding: 2px 15px 2px 15px;
+                }
+
+                &.card--colored {
+                    background-color: lighten(map-get($color-background, main), 2%);
+
+                    .fa-solid {
+                        color: $color-primary;
+                    }
+                }
+
+                &__num {
+                    background-color: $color-primary;
+                    border-radius: 50px;
+                    padding: 4px 7px 2px 7px;
+                    font-size: 12px;
+                    color: map-get($color-background, elem);
+                    position: absolute;
+                    margin-left: -25px;
+                }
+
+                .fa-solid {
+                    color: darken(map-get($color-background, main), 30%);
+                }
+
+                .font-text--bolder {
+                    padding-top: 3px;
+                }
+            }
+        }
     }
 }
 
@@ -134,6 +186,55 @@ header {
     cursor: pointer;
     background-image: linear-gradient(353deg, $color-primary, $color-secondary);
     box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%);
+}
+
+.restaurant {
+    background-color: lighten(map-get($color-background, main), 5%);
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        /**/
+        &__card {
+            height: 200px;
+            margin: 10px 20px 10px 20px; /*repetition 4*/
+            border-radius: 18px;
+            background-color: map-get($color-background, elem);
+            box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
+            /**/
+            &__link {
+                cursor: pointer;
+                /**/
+                &__img {
+                    height: 65%;
+                    overflow: hidden;
+                    border-radius: 18px 18px 0px 0px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    /**/
+                }
+
+                &__txt {
+                    height: 35%;
+                    color: black;
+                    padding: 10px 40px 10px 10px;
+
+                    .font-h2 {
+                        padding-top: 5px;
+                    }
+
+                    .fa-heart {
+                        position: absolute;
+                        right: 30px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* footer */
