@@ -47,13 +47,13 @@ $color-background: (main: #e6e6e6, elem: white, footer: black);
 
 }
 
-.font-h1 {
+.font-h2 {
     font-family: Roboto;
     font-size: 19px; /*1.2rem*/
     margin: 0px;
 }
 
-.font-h2 {
+.font-h3 {
     font-family: Roboto;
     font-weight: 300;
     font-size: 16px; /*1rem*/
@@ -87,12 +87,20 @@ header {
     width: 150px;
 }
 
-.title-h1 {
+.title-h2 {
     padding: 40px 5px 15px 20px;
 }
 
-/* main */
+.return-home {
+    position: absolute;
+    left: 20px;
+    padding-top: 3px;
+    font-size: 18px;
+    color: $color-font-dark;
+}
 
+
+/* main */
 .app {
     &__geolocation {
         height: 50px;
@@ -115,11 +123,11 @@ header {
         background-color: lighten(map-get($color-background, main), 5%);
         text-align: center;
 
-        .font-h1 {
+        .font-h2 {
             padding: 40px 55px 5px 50px;
         }
 
-        .font-h2 {
+        .font-h3 {
             padding: 5px 20px 30px 20px;
         }
 
@@ -198,7 +206,7 @@ header {
         &__card {
             height: 200px;
             margin: 10px 20px 10px 20px; /*repetition 4*/
-            border-radius: 18px;
+            border-radius: 15px;
             background-color: map-get($color-background, elem);
             box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
             /**/
@@ -208,7 +216,7 @@ header {
                 &__img {
                     height: 65%;
                     overflow: hidden;
-                    border-radius: 18px 18px 0px 0px;
+                    border-radius: 15px 15px 0px 0px;
 
                     img {
                         height: 100%;
@@ -223,18 +231,24 @@ header {
                     color: black;
                     padding: 10px 40px 10px 10px;
 
-                    .font-h2 {
+                    .font-h3 {
                         padding-top: 5px;
                     }
 
                     .fa-heart {
                         position: absolute;
                         right: 30px;
+                        font-size: 22px;
+                        padding: 10px 10px;
                     }
                 }
             }
         }
     }
+}
+
+.last-card {
+    padding-bottom: 50px;
 }
 
 /* footer */
@@ -269,3 +283,55 @@ header {
         padding-right: 10px;
     }
 }
+
+
+/*Menu*/
+
+.font-h1 {
+    /**/
+    margin: 0;
+    font-size: 24px;
+}
+
+.descript-card {
+    /**/
+    &__img {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        background-color: lighten(map-get($color-background, main), 5%);
+        border-radius: 30px 30px 0px 0px;
+        padding: 30px 10px 10px 15px;
+        bottom: 180px;
+        position: absolute;
+        width: 100%;
+        
+
+        .fa-heart {
+            position: absolute;
+            right: 30px;
+            font-size: 22px;
+            padding-top: 10px;
+            margin-top: -35px;
+        }
+    }
+}
+
+.menu {
+    background-color: lighten(map-get($color-background, main), 5%);
+
+    &__btn {
+        padding: 30px 0px 30px 0px;
+        text-align: center;
+
+        .btn {
+            padding: 12px 40px 12px 40px;
+        }
+    }
+}
+

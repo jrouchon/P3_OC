@@ -19,45 +19,45 @@
 
 <body>
 
-    <!-- garbage animation link and logo -->
+    <!-- garbage animation link and logo
 
-    <i class="fa-solid fa-arrow-left"></i>
-    <a href="index.html" title=" Retour à la page d'accueil">
-        <img src="images\logo\ohmyfood.png" />
-    </a>
-    <br />
+        <i class="fa-solid fa-arrow-left"></i>
+        <a href="index.html" title=" Retour à la page d'accueil">
+            <img src="images\logo\ohmyfood.png" />
+        </a>
+        <br />
 
-    <div>
-        <p class="font-text">accueil icon</p>
-        <i class="fa-solid fa-location-dot"></i>
-        <i class="fa-solid fa-mobile-screen-button"></i>
-        <i class="fa-solid fa-list-ul"></i>
-        <i class="fa-solid fa-store"></i>
+        <div>
+            <p class="font-text">accueil icon</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-solid fa-store"></i>
 
-    </div>
+        </div>
 
-    <div>
-        <p> card icon </p>
-        <i class="fa-regular fa-heart"></i>
-        <i class="fa-solid fa-circle-check"></i>
-    </div>
+        <div>
+            <p> card icon </p>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
 
-    <div>
-        <p>footer icon</p>
-        <i class="fa-solid fa-utensils"></i>
-        <i class="fa-solid fa-handshake-simple"></i>
-    </div>
+        <div>
+            <p>footer icon</p>
+            <i class="fa-solid fa-utensils"></i>
+            <i class="fa-solid fa-handshake-simple"></i>
+        </div>
 
-    <br />
-    <br />
-    <div>
-        <a href="src\la_palette_du_gout.html">La palette du goût</a>
-        <a href="src\le_delice_des_sens.html">Le délice des sens</a>
-        <a href="src\la_note_enchantee.html">La note enchantée</a>
-        <a href="src\a_la_francaise.html">À la française</a>
-    </div>
+        <br />
+        <br />
+        <div>
+            <a href="src\la_palette_du_gout.html">La palette du goût</a>
+            <a href="src\le_delice_des_sens.html">Le délice des sens</a>
+            <a href="src\la_note_enchantee.html">La note enchantée</a>
+            <a href="src\a_la_francaise.html">À la française</a>
+        </div>
 
-
+    -->
 
     <!-- header nav main section footer -->
     <!-- loader -->
@@ -68,7 +68,8 @@
         </a>
     </header>
     <main>
-        <section class="app"> <!-- localisation - fonctionnement de l'app -->
+        <section class="app">
+            <!-- localisation - fonctionnement de l'app -->
             <div class="app__geolocation">
                 <!-- logo loc -->
                 <i class="app__geolocation__elem app__geolocation__elem--color fa-solid fa-location-dot"></i>
@@ -76,13 +77,13 @@
             </div>
             <div class="app__get-restaurant">
                 <!-- texte réservez et bouton explorer  (ancrage vers restaurant ) -->
-                <h1 class="font-h1">Réservez le menu qui vous convient</h1>
-                <h2 class="font-h2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
+                <h2  class="font-h2">Réservez le menu qui vous convient</h2>
+                <h3 class="font-h3">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
                 <div class="app__get-restaurant__btn"><a href="#anchor-restaurant" class="btn font-text font-text--bolder">Explorer nos restaurants</a></div>
             </div>
             <div class="app__operate">
                 <!-- fonctionnement app - 3 cards -->
-                <h1 class="font-h1 title-h1">Fonctionnement</h1>
+                <h2 class="font-h2 title-h2">Fonctionnement</h2>
                 <div class="app__operate__cards">
                     <div class="app__operate__cards__card">
                         <span class="app__operate__cards__card__num font-text">1</span>
@@ -103,18 +104,20 @@
             </div>
         </section>
 
-        <section class="restaurant">
-            <h1 class="font-h1 title-h1">Restaurants</h1>
+        <section class="restaurant" id="anchor-restaurant">
+            <!-- section - card restaurant avec icone -->
+            <h2 class="font-h2 title-h2">Restaurants</h2>
             <div class="restaurant__cards">
                 <div class="restaurant__cards__card">
                     <a class="restaurant__cards__card__link" href="src\la_palette_du_gout.html">
-                        <div class="restaurant__cards__card__link__img new-tag">
-                            <img class="" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                        <div class="restaurant__cards__card__link__img">
+                            <span class="new-tag"></span>
+                            <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Menu: La palette du goût">
                         </div>
                         <div class="restaurant__cards__card__link__txt">
                             <i class="fa-regular fa-heart"></i>
-                            <p class="font-h2 font-h2--bolder">La palette du goût</p>
-                            <p class="font-h2">Ménilmontant</p>
+                            <p class="font-h3 font-h3--bolder">La palette du goût</p>
+                            <p class="font-h3">Ménilmontant</p>
                         </div>
                     </a>
                 </div>
@@ -123,12 +126,14 @@
             <div class="restaurant__cards">
                 <div class="restaurant__cards__card">
                     <a class="restaurant__cards__card__link" href="src\la_note_enchantee.html">
-                        <div class="restaurant__cards__card__link__img new-tag">
-
+                        <div class="restaurant__cards__card__link__img">
+                            <span class="new-tag"></span>
+                            <img src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="Menu: La note enchantée">
                         </div>
                         <div class="restaurant__cards__card__link__txt">
-                            <p class="font-text font-text--bolder"></p>
-                            <p class="font-text"></p>
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="font-h3 font-h3--bolder">La note enchantée</p>
+                            <p class="font-h3">Charonne</p>
                         </div>
                     </a>
                 </div>
@@ -137,41 +142,43 @@
             <div class="restaurant__cards">
                 <div class="restaurant__cards__card">
                     <a class="restaurant__cards__card__link" href="src\a_la_francaise.html">
-                        <div class="restaurant__cards__card__link__img new-tag">
-
+                        <div class="restaurant__cards__card__link__img">
+                            <img src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Menu: À la française">
                         </div>
                         <div class="restaurant__cards__card__link__txt">
-                            <p class="font-text font-text--bolder"></p>
-                            <p class="font-text"></p>
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="font-h3 font-h3--bolder">À la française</p>
+                            <p class="font-h3">Cité Rouge</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="restaurant__cards">
+            <div class="restaurant__cards last-card">
                 <div class="restaurant__cards__card">
                     <a class="restaurant__cards__card__link" href="src\le_delice_des_sens.html">
-                        <div class="restaurant__cards__card__link__img new-tag">
-
+                        <div class="restaurant__cards__card__link__img">
+                            <img src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Menu: Le délice des sens">
                         </div>
                         <div class="restaurant__cards__card__link__txt">
-                            <p class="font-text font-text--bolder"></p>
-                            <p class="font-text"></p>
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="font-h3 font-h3--bolder">Le délice des sens</p>
+                            <p class="font-h3">Folie-Méricourt</p>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- section - card restaurant avec icone -->
+
         </section>
-        
-        
-        
-        
+
+
+
+
     </main>
     <footer>
         <!-- ohmyfood - proposer un restaurant - devenir partenaire - mention légales - contact (mailto) -->
         <div class="footer">
-            <a href="index.html"><h3 class="footer__elem font-primary">ohmyfood</h3></a>
+            <a href="index.html"><h4 class="footer__elem font-primary">ohmyfood</h4></a>
             <ul class="footer__list">
                 <li class="footer__list__elem"><a class="lien font-text font-text--bolder" href="#"><i class="fa-solid fa-utensils fa-footer"></i>Proposer un restaurant</a></li>
                 <li class="footer__list__elem"><a class="lien font-text font-text--bolder" href="#"><i class="fa-solid fa-handshake-angle fa-footer"></i>Devenir partenaire</a></li>
