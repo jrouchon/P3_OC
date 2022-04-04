@@ -34,6 +34,9 @@
 .font-text--bolder {
   font-weight: 500;
 }
+.font-text--smaller {
+  font-size: 12px;
+}
 
 .font-h2 {
   font-family: Roboto;
@@ -188,7 +191,9 @@ header {
   margin: 10px 20px 10px 20px;
   /*repetition 4*/
   border-radius: 15px;
+  /*repetition card*/
   background-color: white;
+  /*repetition card*/
   box-shadow: 0px 5px 10px #cdcdcd;
   /*repetition 5*/
   /**/
@@ -263,7 +268,7 @@ header {
 }
 
 .descript-card {
-  /**/
+  background-color: #f3f3f3;
   height: 250px;
 }
 .descript-card__img img {
@@ -294,6 +299,9 @@ header {
   padding: 0px 15px 0px 15px;
   /*mixin*/
 }
+.menu--elem-text-color {
+  color: #333333;
+}
 .menu--underline {
   /*mixin*/
   background-color: #99E2D0;
@@ -302,6 +310,29 @@ header {
   margin-top: 5px;
   margin-bottom: 10px;
   margin-left: 15px;
+}
+.menu__cards {
+  /**/
+}
+.menu__cards__card {
+  height: 60px;
+  margin: 10px 15px 10px 15px;
+  /*repetition small card*/
+  border-radius: 15px;
+  /*repetition card*/
+  background-color: white;
+  /*repetition card*/
+  box-shadow: 0px 5px 10px #cdcdcd;
+  /*repetition 5*/
+  padding: 15px 20px 10px 10px;
+}
+.menu__cards__card--title-position {
+  /**/
+}
+.menu__cards__card--text-position {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
 }
 .menu__btn {
   padding: 30px 0px 30px 0px;

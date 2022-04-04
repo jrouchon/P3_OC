@@ -36,7 +36,7 @@ $color-background: (main: #e6e6e6, elem: white, footer: black);
     font-family: Roboto;
     font-size: 14px; /*0.9rem*/
     /*@include font-color($color-background);*/
-
+    
     &--bold {
         font-weight: 400;
     }
@@ -44,7 +44,9 @@ $color-background: (main: #e6e6e6, elem: white, footer: black);
     &--bolder {
         font-weight: 500;
     }
-
+    &--smaller {
+        font-size: 12px;
+    }
 }
 
 .font-h2 {
@@ -206,8 +208,8 @@ header {
         &__card {
             height: 200px;
             margin: 10px 20px 10px 20px; /*repetition 4*/
-            border-radius: 15px;
-            background-color: map-get($color-background, elem);
+            border-radius: 15px; /*repetition card*/
+            background-color: map-get($color-background, elem); /*repetition card*/
             box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
             /**/
             &__link {
@@ -297,8 +299,9 @@ header {
 }
 
 .descript-card {
-    /**/
+    background-color: lighten(map-get($color-background, main), 5%);
     height: 250px;
+
     &__img {
         img {
             height: 100%;
@@ -314,7 +317,7 @@ header {
         bottom: 180px;
         position: absolute;
         width: 100%;
-        
+
 
         .fa-heart {
             position: absolute;
@@ -332,6 +335,11 @@ header {
     &--elem-padding {
         padding: 0px 15px 0px 15px; /*mixin*/
     }
+
+    &--elem-text-color {
+        color: $color-font-dark;
+    }
+
     &--underline { /*mixin*/
         background-color: $color-tertiary;
         height: 3px;
@@ -341,6 +349,27 @@ header {
         margin-left: 15px;
     }
 
+    &__cards {
+        /**/
+        &__card {
+            height: 60px;
+            margin: 10px 15px 10px 15px; /*repetition small card*/
+            border-radius: 15px; /*repetition card*/
+            background-color: map-get($color-background, elem); /*repetition card*/
+            box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
+            padding: 15px 20px 10px 10px;
+
+            &--title-position {
+                /**/
+            }
+
+            &--text-position {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 5px;
+            }
+        }
+    }
 
     &__btn {
         padding: 30px 0px 30px 0px;
