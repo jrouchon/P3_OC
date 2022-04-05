@@ -146,10 +146,10 @@ header {
 .app__operate__cards__card .fa-solid {
   padding: 2px 15px 2px 15px;
 }
-.app__operate__cards__card.card--colored {
+.app__operate__cards__card:hover {
   background-color: #ebebeb;
 }
-.app__operate__cards__card.card--colored .fa-solid {
+.app__operate__cards__card:hover .fa-solid {
   color: #9356DC;
 }
 .app__operate__cards__card__num {
@@ -166,6 +166,20 @@ header {
 }
 .app__operate__cards__card .font-text--bolder {
   padding-top: 3px;
+}
+@media (min-width: 992px) {
+  .app__operate__cards {
+    flex-direction: row;
+    margin-left: 20px;
+  }
+  .app__operate__cards__card {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .app__operate {
+    height: 200px;
+  }
 }
 
 .btn {
@@ -216,30 +230,48 @@ header {
 .restaurant__cards__card__link__txt {
   height: 35%;
   color: black;
-  padding: 10px 40px 10px 10px;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurant__cards__card__link__txt--flex {
+  display: flex;
+  flex-direction: column;
 }
 .restaurant__cards__card__link__txt .font-h3 {
   padding-top: 5px;
 }
 .restaurant__cards__card__link__txt .fa-heart {
-  position: absolute;
-  right: 30px;
+  /*position: absolute;
+  right: 30px;*/
   font-size: 22px;
-  padding: 10px 10px;
+  padding-top: 10px;
+}
+@media (min-width: 992px) {
+  .restaurant__cards {
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurant__cards__card {
+    width: 40%;
+  }
 }
 
 .last-card {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* footer */
 .footer {
   height: 200px;
   background-color: #333333;
+  width: 100%;
+}
+.footer-menu {
   /*je comprend pas pourquoi...*/
   position: absolute;
   bottom: 0px;
-  width: 100%;
 }
 .footer__elem {
   padding: 20px 20px 15px 20px;
@@ -286,10 +318,15 @@ header {
   object-position: center;
 }
 
-body {
-  /* pourquoi !????*/
+.pb-footer {
+  /* pourquoi !????  */
   position: relative;
   height: 1430px;
+}
+
+.pb-footer-2 {
+  position: relative;
+  height: 1500px;
 }
 
 .menu {

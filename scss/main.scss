@@ -158,7 +158,7 @@ header {
                     padding: 2px 15px 2px 15px;
                 }
 
-                &.card--colored {
+                &:hover {
                     background-color: lighten(map-get($color-background, main), 2%);
 
                     .fa-solid {
@@ -184,6 +184,19 @@ header {
                     padding-top: 3px;
                 }
             }
+
+            @media (min-width: 992px) {
+                flex-direction: row;
+                margin-left: 20px;
+
+                &__card {
+                    width: 30%;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            height: 200px;
         }
     }
 }
@@ -231,26 +244,43 @@ header {
                 &__txt {
                     height: 35%;
                     color: black;
-                    padding: 10px 40px 10px 10px;
+                    padding: 10px 20px 10px 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    &--flex {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
                     .font-h3 {
                         padding-top: 5px;
                     }
 
                     .fa-heart {
-                        position: absolute;
-                        right: 30px;
+                        /*position: absolute;
+                        right: 30px;*/
                         font-size: 22px;
-                        padding: 10px 10px;
+                        padding-top: 10px;
                     }
                 }
+            }
+        }
+
+        @media (min-width: 992px) {
+            display: flex;
+            flex-direction: row;
+
+            &__card {
+                width: 40%;
             }
         }
     }
 }
 
 .last-card {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 /* footer */
@@ -258,10 +288,12 @@ header {
 .footer {
     height: 200px;
     background-color: lighten(map-get($color-background, footer), 20%);
-    /*je comprend pas pourquoi...*/
-    position: absolute;
-    bottom: 0px;
     width: 100%;
+
+    &-menu { /*je comprend pas pourquoi...*/
+        position: absolute;
+        bottom: 0px;
+    }
 
     &__elem {
         padding: 20px 20px 15px 20px;
@@ -321,9 +353,14 @@ header {
     }
 }
 
-body { /* pourquoi !????*/
+.pb-footer { /* pourquoi !????  */
     position: relative;
     height: 1430px;
+}
+
+.pb-footer-2 {
+    position: relative;
+    height: 1500px;
 }
 
 .menu {

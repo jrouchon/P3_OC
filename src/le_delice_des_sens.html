@@ -4,17 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ohmyfood! - r�servez votre menu dans le restaurant de votre choix !" /> <!-- mettre description adapt�-->
+    <meta name="description" content="Ohmyfood! - réservez votre menu dans le restaurant de votre choix !" /> <!-- mettre description adapt�-->
     <link href="..\images\web_icon\icone.png" rel="icon" /> <!-- icone d'onglet -->
     <title>Ohmyfood!</title>
     <meta name="author" content="justine r" />
     <script src="https://kit.fontawesome.com/74caa84508.js" crossorigin="anonymous"></script> <!--script font awesome-->
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
 
 
 </head>
-<body>
+<body class="pb-footer">
     <header>
         <div class="header-pages">
             <a class="return-home" href="..\index.html"><i class="fa-solid fa-arrow-left"></i></a>
@@ -24,13 +26,167 @@
         </div>
     </header>
     <main>
-        <!-- section - image et nom du restaurant avec icone-->
-        <!-- section - card du menu -->
-        <!-- bouton commander -->
+        <section class="banner">
+            <!-- section - image et nom du restaurant avec icone-->
+            <div class="banner__img">
+                <img src="..\images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Menu: Le délice des sens">
+            </div>
+
+        </section>
+
+        <section class="menu">
+            <!-- section - card du menu -->
+            <div class="menu__title">
+                <h1 class="font-primary font-h1">À la française</h1>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h3 class="font-h3 menu--elem-padding menu--elem-text-color">ENTRÉES</h3>
+            <div class="menu--underline"></div>
+            <div class="menu__cards">
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Tartare de thon</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Assaisonné au yuzu</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">25€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Bouchée de homard croustillant</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Et sa farandole de petits légumes</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">35€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Velouté de cèpes</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Aux truffes</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">20€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="font-h3 menu--elem-padding menu--elem-text-color">PLATS</h3>
+            <div class="menu--underline"></div>
+            <div class="menu__cards">
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Poulet rôti aux herbes de Provence</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Et sa crème de truffe</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">40€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Langouste rôtie</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Et ses légumes de saison</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">35€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Côte de boeuf Angus</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Et sa purée de panais</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">44€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="font-h3 menu--elem-padding menu--elem-text-color">DESSERTS</h3>
+            <div class="menu--underline"></div>
+            <div class="menu__cards">
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Farandole de desserts</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Du chef</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">18€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Crème brulée</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">Revisitée</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">22€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+
+                <div class="menu__cards__card">
+                    <div class="menu__cards__card--title-position">
+                        <p class="font-text font-text--bolder">Tiramisu</p>
+                        <div class="menu__cards__card--text-position">
+                            <p class="font-text font-text--smaller menu--elem-text-color">À la noisette</p>
+
+                            <span class="font-text font-text--bolder font-text--smaller menu--elem-text-color menu__cards__card--price-padd">23€</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!--checked-->
+                    </div>
+                </div>
+            </div>
+
+            <!-- bouton commander -->
+            <div class="menu__btn">
+                <button class="btn font-text font-text--bolder">Commander</button>
+            </div>
+        </section>
     </main>
     <footer>
         <!-- ohmyfood - proposer un restaurant - devenir partenaire - mention légales - contact (mailto) -->
-        <div class="footer">
+        <div class="footer footer-menu">
             <a href="index.html"><h3 class="footer__elem font-primary">ohmyfood</h3></a>
             <ul class="footer__list">
                 <li class="footer__list__elem"><a class="lien font-text font-text--bolder" href="#"><i class="fa-solid fa-utensils fa-footer"></i>Proposer un restaurant</a></li>
