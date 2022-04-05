@@ -236,6 +236,10 @@ header {
 .footer {
   height: 200px;
   background-color: #333333;
+  /*je comprend pas pourquoi...*/
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 .footer__elem {
   padding: 20px 20px 15px 20px;
@@ -267,33 +271,44 @@ header {
   font-weight: 100;
 }
 
-.descript-card {
+.banner {
   background-color: #f3f3f3;
   height: 250px;
 }
-.descript-card__img img {
+.banner__img {
+  height: 100%;
+  width: 100%;
+}
+.banner__img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
-.descript-card__title {
+
+body {
+  /* pourquoi !????*/
+  position: relative;
+  height: 1430px;
+}
+
+.menu {
   background-color: #f3f3f3;
   border-radius: 30px 30px 0px 0px;
-  padding: 30px 15px 20px 15px;
-  bottom: 180px;
+  top: 250px;
   position: absolute;
   width: 100%;
+  overflow: hidden;
 }
-.descript-card__title .fa-heart {
+.menu__title {
+  padding: 30px 15px 20px 15px;
+}
+.menu__title .fa-heart {
   position: absolute;
   right: 30px;
   font-size: 22px;
   padding-top: 10px;
   margin-top: -35px;
-}
-
-.menu {
-  background-color: #f3f3f3;
 }
 .menu--elem-padding {
   padding: 0px 15px 0px 15px;
@@ -313,6 +328,7 @@ header {
 }
 .menu__cards {
   /**/
+  margin-bottom: 35px;
 }
 .menu__cards__card {
   height: 60px;
@@ -326,6 +342,9 @@ header {
   /*repetition 5*/
   padding: 15px 20px 10px 10px;
 }
+.menu__cards__card--price-padd {
+  margin-left: 10px;
+}
 .menu__cards__card--title-position {
   /**/
 }
@@ -333,9 +352,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+  white-space: nowrap;
+  /* pour les ...*/
 }
 .menu__btn {
-  padding: 30px 0px 30px 0px;
+  padding: 5px 0px 40px 0px;
   text-align: center;
 }
 .menu__btn .btn {

@@ -258,10 +258,15 @@ header {
 .footer {
     height: 200px;
     background-color: lighten(map-get($color-background, footer), 20%);
+    /*je comprend pas pourquoi...*/
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 
     &__elem {
         padding: 20px 20px 15px 20px;
     }
+
     &__list__elem {
         padding: 5px 20px;
     }
@@ -270,6 +275,7 @@ header {
         color: white;
         font-weight: 400;
     }
+
     .font-text {
         color: lighten(map-get($color-background, main), 5%);
     }
@@ -298,26 +304,37 @@ header {
     font-weight: 100;
 }
 
-.descript-card {
+.banner {
     background-color: lighten(map-get($color-background, main), 5%);
     height: 250px;
 
     &__img {
+        height: 100%;
+        width: 100%;
+
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            object-position: center;
         }
     }
+}
 
+body { /* pourquoi !????*/
+    position: relative;
+    height: 1430px;
+}
+
+.menu {
+    background-color: lighten(map-get($color-background, main), 5%);
+    border-radius: 30px 30px 0px 0px;
+    top: 250px;
+    position: absolute;
+    width: 100%;
+    overflow:hidden;
     &__title {
-        background-color: lighten(map-get($color-background, main), 5%);
-        border-radius: 30px 30px 0px 0px;
         padding: 30px 15px 20px 15px;
-        bottom: 180px;
-        position: absolute;
-        width: 100%;
-
 
         .fa-heart {
             position: absolute;
@@ -327,10 +344,6 @@ header {
             margin-top: -35px;
         }
     }
-}
-
-.menu {
-    background-color: lighten(map-get($color-background, main), 5%);
 
     &--elem-padding {
         padding: 0px 15px 0px 15px; /*mixin*/
@@ -351,6 +364,7 @@ header {
 
     &__cards {
         /**/
+        margin-bottom: 35px;
         &__card {
             height: 60px;
             margin: 10px 15px 10px 15px; /*repetition small card*/
@@ -358,6 +372,10 @@ header {
             background-color: map-get($color-background, elem); /*repetition card*/
             box-shadow: 0px 5px 10px darken(map-get($color-background, main), 10%); /*repetition 5*/
             padding: 15px 20px 10px 10px;
+
+            &--price-padd {
+                margin-left: 10px;
+            }
 
             &--title-position {
                 /**/
@@ -367,12 +385,13 @@ header {
                 display: flex;
                 justify-content: space-between;
                 padding-top: 5px;
+                white-space: nowrap; /* pour les ...*/
             }
         }
     }
 
     &__btn {
-        padding: 30px 0px 30px 0px;
+        padding: 5px 0px 40px 0px;
         text-align: center;
 
         .btn {
