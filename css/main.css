@@ -304,7 +304,7 @@ header {
   opacity: 1;
   color: white;
   /*background-image: linear-gradient(0deg, $color-primary, $color-secondary);*/
-  animation: like 0.6s forwards;
+  animation: like 0.8s forwards;
 }
 @media (min-width: 992px) {
   .restaurant__cards {
@@ -328,19 +328,19 @@ header {
     color: transparent;
   }
   30% {
-    background: linear-gradient(0deg, white, #FF79DA);
+    background: linear-gradient(0deg, #FF79DA, white, white);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   60% {
-    background: linear-gradient(0deg, white, #FF79DA, #9356DC);
+    background: linear-gradient(0deg, #9356DC, #FF79DA, #FF79DA, white);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   100% {
-    background: linear-gradient(0deg, #FF79DA, #9356DC);
+    background: linear-gradient(0deg, #9356DC, #FF79DA, #FF79DA);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -533,6 +533,123 @@ header {
 
 .appear-order-5 {
   animation-delay: 1600ms;
+}
+
+.bg-grey {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-color: #333333;
+  z-index: 2;
+  position: fixed;
+  animation: disappear 0s linear 3s forwards;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 0s linear 3s forwards;
+}
+.loader__popup {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  opacity: 1;
+  background-color: white;
+  z-index: 4;
+  border-radius: 20px;
+}
+.loader__popup--spin {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border: 16px solid #dadada;
+  border-top: 16px solid #99e2d0;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.4s linear 2;
+}
+.loader__popup--mid-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  font-size: 50px;
+  top: 38%;
+  left: 38%;
+  color: silver;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: loader-fill 3s 1 forwards;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-fill {
+  0% {
+    background: linear-gradient(0deg, #bfbfbf, #bfbfbf);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  20% {
+    background: linear-gradient(0deg, #bfbfbf, #bfbfbf);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  30% {
+    background: linear-gradient(0deg, #9356DC, #bfbfbf, #bfbfbf, #bfbfbf);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  40% {
+    background: linear-gradient(0deg, #9356DC, #9356DC, #bfbfbf, #bfbfbf, #bfbfbf);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  60% {
+    background: linear-gradient(0deg, #9356DC, #9356DC, #bfbfbf, #bfbfbf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  80% {
+    background: linear-gradient(0deg, #9356DC, #9356DC, #9356DC, #bfbfbf);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  100% {
+    background: linear-gradient(0deg, #9356DC, #9356DC);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
