@@ -425,14 +425,16 @@ header {
   animation: menu_card_appear 1s alternate forwards;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  /*pour animation arrivee*/
 }
 .menu__cards__card--title-position {
-  padding: 15px 5px 10px 10px;
+  padding: 15px 10px 10px 10px;
   width: 100%;
   overflow: hidden;
-  /*&:hover, &:active {
-
-  }*/
+}
+.menu__cards__card--title-position:hover, .menu__cards__card--title-position:active {
+  /* animation: contre-check 400ms linear alternate forwards;*/
 }
 .menu__cards__card--text-position {
   display: flex;
@@ -442,6 +444,10 @@ header {
 .menu__cards__card--price-padd {
   margin-left: 10px;
   white-space: normal;
+}
+.menu__cards__card .check {
+  width: 0;
+  display: none;
 }
 .menu__cards__card .fa-circle-check {
   opacity: 0;
@@ -454,10 +460,10 @@ header {
   align-items: center;
   height: 60px;
   border-radius: 0px 15px 15px 0px;
-  animation: check 400ms linear alternate forwards;
+  animation: check 400ms linear normal forwards;
 }
 .menu__cards__card:hover .fa-circle-check, .menu__cards__card:active .fa-circle-check {
-  animation: check_spin 400ms linear alternate forwards;
+  animation: check_spin 400ms linear normal forwards;
   font-size: 24px;
 }
 .menu__btn {
@@ -505,11 +511,22 @@ header {
 @keyframes check {
   0% {
     width: 0;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 1;
     width: 15%;
+  }
+}
+@keyframes contre-check {
+  /**/
+  0% {
+    opacity: 1;
+    width: 15%;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
   }
 }
 @keyframes check_spin {
@@ -624,6 +641,14 @@ header {
   100% {
     transform: scale(0);
     display: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @keyframes loader-fill {
