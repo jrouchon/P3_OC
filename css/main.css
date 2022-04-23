@@ -377,20 +377,21 @@ header {
   color: white;
   opacity: 0;
 }
-@media (min-width: 1100px) {
-  .menu-part {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 50px 20px 50px;
-  }
+.menu-part {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px 20px 50px;
+  flex-direction: column;
 }
 @media (min-width: 700px) {
   .menu-part {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 50px 20px 50px;
+    flex-direction: unset;
+  }
+}
+@media (min-width: 1100px) {
+  .menu-part {
+    flex-direction: row;
   }
 }
 .menu--elem-padding {
