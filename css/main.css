@@ -541,19 +541,19 @@ header {
     color: transparent;
   }
   30% {
-    background: linear-gradient(0deg, #FF79DA, white, white);
+    background: linear-gradient(0deg, #9356DC, white, white);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   60% {
-    background: linear-gradient(0deg, #9356DC, #FF79DA, #FF79DA, white);
+    background: linear-gradient(0deg, #FF79DA, #9356DC, #9356DC, white);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   100% {
-    background: linear-gradient(0deg, #9356DC, #FF79DA, #FF79DA);
+    background: linear-gradient(0deg, #FF79DA, #9356DC, #9356DC);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

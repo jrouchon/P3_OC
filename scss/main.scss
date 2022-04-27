@@ -625,21 +625,21 @@ header {
     }
 
     30% {
-        background: linear-gradient(0deg, $color-secondary, map-get($color-background, elem), map-get($color-background, elem));
+        background: linear-gradient(0deg, $color-primary, map-get($color-background, elem), map-get($color-background, elem));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
 
     60% {
-        background: linear-gradient(0deg, $color-primary, $color-secondary, $color-secondary, map-get($color-background, elem));
+        background: linear-gradient(0deg, $color-secondary, $color-primary, $color-primary, map-get($color-background, elem));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
 
     100% {
-        background: linear-gradient(0deg, $color-primary, $color-secondary, $color-secondary);
+        background: linear-gradient(0deg, $color-secondary, $color-primary, $color-primary);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
