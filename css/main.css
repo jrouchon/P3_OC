@@ -420,18 +420,20 @@ header {
 .menu-part {
   display: flex;
   justify-content: space-between;
-  margin: 20px 50px 20px 50px;
+  margin: 15px 20px 15px 20px;
   flex-direction: column;
 }
 @media (min-width: 700px) {
   .menu-part {
     flex-wrap: wrap;
     flex-direction: unset;
+    margin: 20px 30px 20px 30px;
   }
 }
 @media (min-width: 1100px) {
   .menu-part {
     flex-direction: row;
+    margin: 20px 50px 20px 50px;
   }
 }
 .menu--elem-padding {
