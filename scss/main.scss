@@ -1,11 +1,5 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
 
-$color-font-dark: #333333;
-
-$color-background: (main: #e6e6e6, elem: white, footer: black);
-/*#d9d9d9*/
+@import "utils.scss"; 
 
 * {
     box-sizing: border-box;
