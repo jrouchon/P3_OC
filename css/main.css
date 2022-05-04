@@ -192,6 +192,7 @@ header {
 }
 .app__operate__cards__card .fa-solid {
   padding: 2px 15px 2px 15px;
+  color: #9a9a9a;
 }
 .app__operate__cards__card:hover {
   background-color: #ebebeb;
@@ -207,9 +208,6 @@ header {
   color: white;
   position: absolute;
   margin-left: -25px;
-}
-.app__operate__cards__card .fa-solid {
-  color: #9a9a9a;
 }
 .app__operate__cards__card .font-text--bolder {
   padding-top: 3px;
